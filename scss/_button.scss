@@ -5,8 +5,10 @@
     border-radius: 2rem;
     color: #ffffff;
     cursor: pointer;
+    font-size: 1.4rem;
     font-weight: bold;
     display: inline-block;
+    margin: 2rem 0;
     padding: .5rem 2rem;
     transition: ease-in-out .1s;
 
@@ -26,4 +28,9 @@
     &.loading {
     
     }
+
+    @media (max-width: $smartphone-width){ 
+        width: 100%;
+    }
+
 }

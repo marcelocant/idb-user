@@ -17,6 +17,7 @@ a {
 
 h1 {
     color: $primary-color;
+    margin-top: $space-default;
     margin-bottom: $space-default;
 }
 
@@ -24,3 +25,4 @@ h2, p, input {
     color: $secondary-color;
     margin-bottom: $space-default; 
 }
+ 

@@ -31,4 +31,33 @@
         border-bottom: 2px solid #454545;
     }
 
+    @media (max-width: $smartphone-width){
+        display: flex;
+        max-width: 100%;
+        flex-direction: column;
+        th {
+            display: none;
+        }
+        tr {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: $space-default;
+            width: 100%;
+            td {
+                display: inline;
+                width: calc(99% - 10px);
+
+                &:first-child {
+                    font-weight: bold;
+                }
+
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+
 }
