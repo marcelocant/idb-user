@@ -1,0 +1,22 @@
+$primary-color: #00C8b3;
+$secondary-color: #666666;
+$disabled-color: #dddcdc;
+$erro-color: #eb4a46;
+
+$desktop-width: 1200px;
+$smartphone-width: 767px;
+
+$space-default: 1rem;
+
+* {
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuários</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+<div class="app">
+
+    <section class="container">
+        <h1>Criar usuário</h1>
+        <form onsubmit="userController.create(event)" class="container__create form">
+            <div class="form__field">
+                <input type="text" class="form__input form__input-text" id="name" required autocomplete="name" placeholder="Nome completo (sem abreviações)">
+                <label for="name">Nome completo (sem abreviações)</label>
+            </div>
+            <div class="form__field">
+                <input type="text" class="form__input form__input-text" id="email" required autocomplete="email" placeholder="E-mail">
+                <label for="email">E-mail</label>
+            </div>
+            <div class="form__field">
+                <input type="text" class="form__input form__input-text" id="cpf" required placeholder="CPF">
+                <label for="cpf">CPF</label>
+            </div>
+            <div class="form__field">
+                <input type="text" class="form__input form__input-text" id="phone" required autocomplete="phone" placeholder="Telefone">
+                <label for="phone">Telefone</label>
+            </div>
+            <div class="form__submit">
+                <button class="button">Cadastrar</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="container">
+
+        <h1 class="text-center">Lista Usuários</h1>
+        <div id="messageView"></div>
+        
+        <div class="text-center">
+            <button onclick="userController.importUsers(1)" class="button" type="button">
+                Importar Usuários
+            </button>
+        </div> 
+
+        <div id="usersView"></div>
+
+        <button onclick="userController.clear()" class="button button--danger" type="button">
+            Apagar
+        </button>
+
+    </section>
+    
+
+    
+
+</div>
+
+<script src="./app/models/User.js"></script>
+<script src="./app/controllers/UserController.js"></script>
+<script src="./app/models/UserList.js"></script>
+<script src="./app/views/View.js"></script>
+<script src="./app/views/UsersView.js"></script>
+<script src="./app/models/Message.js"></script>
+<script src="./app/views/MessageView.js"></script>
+<script src="./app/services/ProxyFactory.js"></script>
+<script src="./app/helpers/Bind.js"></script>
+<script src="./app/services/UserService.js"></script>
+<script src="./app/services/HttpService.js"></script>
+<script src="./app/services/ConnetionFactory.js"></script>
+<script src="./app/dao/UserDao.js"></script>
+<script>
+    var userController = new UserController();
+</script>
+</body>
+</html>

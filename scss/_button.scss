@@ -1,0 +1,29 @@
+
+.button {
+    border: 0 none;
+    background-color: $primary-color;
+    border-radius: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    padding: .5rem 2rem;
+    transition: ease-in-out .1s;
+
+    &--danger {
+        background-color: $erro-color;
+    }
+    
+    &:hover {
+        opacity: .7;
+    }
+    
+    &:disabled {
+        background-color: $disabled-color;
+        color: #f6f6f6;
+    }
+    
+    &.loading {
+    
+    }
+}

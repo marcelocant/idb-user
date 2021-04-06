@@ -1,0 +1,50 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    &__field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        position: relative;
+        input {
+            border: 0 none;
+            border-bottom: 2px solid $disabled-color;
+            transition: ease-in-out .1s;
+
+            &:focus {
+                border: 0;
+                border-bottom: 2px solid $primary-color;
+                & ~ label {
+                    display: block;
+                }
+                &::placeholder {
+                    color: transparent;
+                    transition: ease-in-out .1s;
+                }
+            }
+
+            &.error {
+                color: $erro-color;
+                border-color: $erro-color;
+            }
+        }
+
+        label {
+           color: $secondary-color;
+           display: none;
+           font-size: 70%;
+           position: absolute;
+           top: .1rem;
+           left: $space-default;
+           transition: ease-in-out .1s;
+       }
+    
+    }
+    
+    &__input {
+        padding: $space-default;
+        position: relative;
+        
+    }
+
+}

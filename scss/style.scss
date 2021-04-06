@@ -1,0 +1,26 @@
+@import '_base';
+@import '_button';
+@import '_form';
+@import '_table';
+
+.container {
+    display: block;
+    margin: 0 auto;
+    max-width: 99%;
+    padding: $space-default;
+    width: $desktop-width;
+}
+
+a {
+    cursor: pointer;
+}
+
+h1 {
+    color: $primary-color;
+    margin-bottom: $space-default;
+}
+
+h2, p, input {
+    color: $secondary-color;
+    margin-bottom: $space-default; 
+}
